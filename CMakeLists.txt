@@ -24,6 +24,7 @@ add_library(
     ${PROJECT_NAME} 
     SHARED 
     src/degeneracy_estimation/solution.cpp
+    src/data_provider/data_provider_EuRoC.cpp
     # NAMESPACE 
     # ${PROJECT_NAME}::
 )
@@ -32,3 +33,9 @@ target_include_directories(
     ${PROJECT_NAME} 
     PUBLIC 
 )
+
+# add test
+if (BUILD_TESTS)
+    enable_testing()
+    add_subdirectory(test)
+endif()
