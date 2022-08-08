@@ -25,3 +25,4 @@ set(libs ${PROJECT_NAME} ${GTestLibs} pthread)
 
 CompileTest("test_data_provider_EuRoC" "${libs}")
 CompileTest("test_stats" "${libs}")
+CompileTest("test_camera_undistorter" "${libs}")
